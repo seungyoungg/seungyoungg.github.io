@@ -23,15 +23,9 @@ short_bio_text_justify: false
 
 short_bio: >-
   <p>
-    My research focuses on developing <strong>trustworthy multimodal AI</strong>
-    that models and proactively detects real-world risks, while providing
-    <strong>evidence-grounded explanations</strong> to support timely intervention.
-  </p>
-  
-  <p>
-    By connecting risk detection with actionable decision support, I aim to
-    translate AI-based insights into effective real-world interventions that
-    help people live <strong>safer, fairer, and more fulfilling lives</strong>.
+    I develop <strong>trustworthy multimodal AI</strong> to detect and explain
+    <strong>emerging risks in real-world systems</strong>, turning model predictions into
+    <strong>evidence-grounded, actionable decision support</strong> for timely intervention.
   </p>
 
 research_keywords:
