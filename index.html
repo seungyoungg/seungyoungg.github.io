@@ -1,23 +1,36 @@
-<div class="col-lg-9 col-md-8">
+---
+layout: default
+---
 
-    <!-- About Me -->
-    {% include widgets/profile_card_bio_only.html %}
+<div class="row">
 
-    <!-- Latest News -->
-    {% include widgets/latest_news.html %}
+    <!-- 기존 왼쪽 Profile 영역 -->
+    <div class="col-lg-3 col-md-4">
+        ...
+    </div>
 
-    <!-- Selected Publications -->
-    {% if site.data.display.homepage.show_selected_publications %}
-        {% assign pubs = site.publications
-            | sort: "date"
-            | reverse
-            | where: "selected", true
-        %}
+    <div class="col-lg-9 col-md-8">
 
-        {% include widgets/publication_card.html
-            publications=pubs
-            title='<i class="fas fa-star"></i> Selected Publications'
-        %}
-    {% endif %}
+        <!-- About Me -->
+        {% include widgets/profile_card_bio_only.html %}
+
+        <!-- Latest News -->
+        {% include widgets/latest_news.html %}
+
+        <!-- Selected Publications -->
+        {% if site.data.display.homepage.show_selected_publications %}
+            {% assign pubs = site.publications
+                | sort: "date"
+                | reverse
+                | where: "selected", true
+            %}
+
+            {% include widgets/publication_card.html
+                publications=pubs
+                title='<i class="fas fa-star"></i> Selected Publications'
+            %}
+        {% endif %}
+
+    </div>
 
 </div>
