@@ -12,13 +12,15 @@ layout: default
 
         <!-- About Me -->
         {% include widgets/profile_card_bio_only.html %}
-
+        
         <!-- Latest News -->
-        {% include widgets/latest_news.html %}
-
+        <div class="mt-4">
+            {% include widgets/latest_news.html %}
+        </div>
+        
         <!-- Education -->
         {% include widgets/experience_card.html %}
-
+        
         <!-- Selected Publications -->
         {% if site.data.display.homepage.show_selected_publications %}
 
