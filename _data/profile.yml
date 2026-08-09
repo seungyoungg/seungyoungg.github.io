@@ -8,6 +8,9 @@ positions:
   - name: Department of Data Science, Hanyang University
     logo: /assets/images/badges/hanyang.png
 
+  - name: Intelligent Mobile Computing Lab
+    url: https://imc.hanyang.ac.kr/
+
 email: "seungyoungg@hanyang.ac.kr"
 cv_link: /assets/files/Seungyoung_Shin_CV.pdf
 
