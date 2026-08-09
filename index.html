@@ -1,24 +1,33 @@
 ---
 layout: default
+title: About
+navbar_title: About
 ---
 
 <div class="row">
 
-    <!-- 기존 왼쪽 Profile 영역 -->
+    <!-- Left: Profile -->
     <div class="col-lg-3 col-md-4">
-        ...
+        {% include widgets/profile_card_mini.html %}
     </div>
 
+
+    <!-- Right: Main Content -->
     <div class="col-lg-9 col-md-8">
 
         <!-- About Me -->
         {% include widgets/profile_card_bio_only.html %}
 
+
         <!-- Latest News -->
-        {% include widgets/latest_news.html %}
+        <div class="mt-4">
+            {% include widgets/latest_news.html %}
+        </div>
+
 
         <!-- Selected Publications -->
         {% if site.data.display.homepage.show_selected_publications %}
+
             {% assign pubs = site.publications
                 | sort: "date"
                 | reverse
@@ -29,6 +38,7 @@ layout: default
                 publications=pubs
                 title='<i class="fas fa-star"></i> Selected Publications'
             %}
+
         {% endif %}
 
     </div>
