@@ -3,6 +3,7 @@
 <div class="card border-0 shadow-sm mb-4">
     <div class="card-body p-4">
 
+        <!-- Title -->
         <h5 class="font-weight-bold mb-3">
             <i class="fas fa-graduation-cap mr-1"></i>
             Education
@@ -17,8 +18,13 @@
                    {% unless forloop.last %}border-bottom{% endunless %}"
         >
 
-            <div class="d-flex align-items-start">
+            <!-- Left: Logo + Education Information -->
+            <div
+                class="d-flex align-items-start flex-grow-1"
+                style="min-width: 0;"
+            >
 
+                <!-- University Logo -->
                 {% if item.logo %}
                 <img
                     src="{{ item.logo | relative_url }}"
@@ -33,24 +39,111 @@
                 >
                 {% endif %}
 
-                <div>
-                    <div class="font-weight-bold">
+
+                <!-- Education Details -->
+                <div style="min-width: 0;">
+
+                    <!-- University -->
+                    <div
+                        class="font-weight-bold"
+                        style="line-height: 1.4;"
+                    >
                         {{ item.name }}
                     </div>
 
-                    <div class="small text-muted mt-1">
+
+                    <!-- Department -->
+                    {% if item.department %}
+                    <div
+                        class="small text-muted mt-1"
+                        style="line-height: 1.45;"
+                    >
+                        {{ item.department }}
+                    </div>
+                    {% endif %}
+
+
+                    <!-- Degree / Position -->
+                    {% if item.position %}
+                    <div
+                        class="small text-muted"
+                        style="line-height: 1.45;"
+                    >
                         {{ item.position }}
                     </div>
+                    {% endif %}
+
+
+                    <!-- Lab -->
+                    {% if item.lab %}
+                    <div
+                        class="small mt-1"
+                        style="
+                            line-height: 1.45;
+                            overflow-wrap: break-word;
+                        "
+                    >
+
+                        {% if item.lab_url %}
+
+                        <a
+                            href="{{ item.lab_url }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style="
+                                color: #315b7d;
+                                font-weight: 500;
+                                text-decoration: none;
+                            "
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="{{ item.lab }}"
+                        >
+                            {{ item.lab }}
+
+                            <i
+                                class="fas fa-external-link-alt"
+                                style="
+                                    font-size: 0.65em;
+                                    margin-left: 0.1rem;
+                                "
+                            ></i>
+                        </a>
+
+                        {% else %}
+
+                        <span
+                            style="
+                                color: #315b7d;
+                                font-weight: 500;
+                            "
+                        >
+                            {{ item.lab }}
+                        </span>
+
+                        {% endif %}
+
+                    </div>
+                    {% endif %}
+
                 </div>
 
             </div>
 
+
+            <!-- Right: Date -->
+            {% if item.date %}
             <div
-                class="small text-muted mt-2 mt-md-0 ml-md-3"
-                style="white-space: nowrap;"
+                class="small text-muted
+                       mt-2 mt-md-0 ml-md-3"
+                style="
+                    white-space: nowrap;
+                    flex-shrink: 0;
+                "
             >
                 {{ item.date }}
             </div>
+            {% endif %}
 
         </div>
 
