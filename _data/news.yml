@@ -6,8 +6,8 @@
     Video: "https://www.youtube.com/watch?v=FTTpqGmr3jE"
 
 - date: "Jun. 2026"
-  title: "BulkShield accepted as a Full Paper at ACM KDD 2026 🎉"
-  description: "Accepted to the AI for Science Track."
+  title: "BulkShield accepted to ACM KDD 2026 🎉"
+  description: " Full Paper · AI for Science Track"
   links:
     Paper: "https://doi.org/10.1145/3770855.3818875"
     Code: "https://github.com/imc-hanyang/BulkShield"
