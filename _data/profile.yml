@@ -41,6 +41,8 @@ education:
     position: >-
       Department of Data Science <br/>
       Integrated Ph.D. Student
+      lab: Intelligent Mobile Computing Lab (IMC Lab)
+      lab_url: https://imc.hanyang.ac.kr/
     date: Mar. 2024 - Present
 
   - name: Korea Institute of Energy Technology (KENTECH)
@@ -48,6 +50,8 @@ education:
     position: >-
       Department of Energy AI <br/>
       Integrated Ph.D. Student
+      lab: Vision Intelligence, Energy-Wise (VIEW Lab)
+      lab_url: https://https://view.kentech.ac.kr//
     date: Mar. 2023 - Feb. 2024
 
   - name: University of Seoul
@@ -55,6 +59,7 @@ education:
     position: >-
       Department of Mathematics <br/>
       B.S. in Mathematics
+      lab: Mathematical Computation Lab · Undergraduate Researcher
     date: Mar. 2019 - Feb. 2023
 
 experience:
