@@ -1,29 +1,23 @@
 ---
 layout: default
-title: About
-navbar_title: About
 ---
 
 <div class="row">
 
-    <!-- Left: Profile -->
     <div class="col-lg-3 col-md-4">
         {% include widgets/profile_card_mini.html %}
     </div>
 
-
-    <!-- Right: Main Content -->
     <div class="col-lg-9 col-md-8">
 
         <!-- About Me -->
         {% include widgets/profile_card_bio_only.html %}
 
-
         <!-- Latest News -->
-        <div class="mt-4">
-            {% include widgets/latest_news.html %}
-        </div>
+        {% include widgets/latest_news.html %}
 
+        <!-- Education -->
+        {% include widgets/experience_card.html %}
 
         <!-- Selected Publications -->
         {% if site.data.display.homepage.show_selected_publications %}
