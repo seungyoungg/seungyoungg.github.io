@@ -29,7 +29,23 @@
                 <div class="row small">
                     <div class="col text-center">
                         {% for position in site.data.profile.positions %}
-                        {{ position.name }}<br/>
+                        
+                            {% if position.url %}
+                                <a
+                                    href="{{ position.url }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style="font-weight: 500;"
+                                    title="Intelligent Mobile Computing Lab"
+                                >
+                                    {{ position.name }} ↗
+                                </a>
+                            {% else %}
+                                {{ position.name }}
+                            {% endif %}
+                        
+                            <br/>
+                        
                         {% endfor %}
                     </div>
                 </div>
